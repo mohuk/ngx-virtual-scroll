@@ -1,20 +1,22 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { NgxVScrollModule } from 'ngx-vscroll';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NgxVScrollComponent } from './scroller/ngx-vscroll.component';
+import { NgxVScrollService } from './scroller/ngx-vscroll.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NgxVScrollComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgxVScrollModule
   ],
-  providers: [],
+  providers: [
+    NgxVScrollService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
